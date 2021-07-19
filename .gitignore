@@ -1,0 +1,10 @@
+pythonenv*
+.vscode/
+.venv/
+.env
+.DS_Store
+*.log
+*.txt
+test-directory2
+temp-directory
+look_here
