@@ -89,12 +89,12 @@ def search_for_magic(filename, start_line, magic_string):
     with open(filename, 'r') as file:
         content = file.readlines()
         for i, line in enumerate(content):
-            if i > start_line:
+            if i >= start_line:
                 if magic_string in line:
                     text_file = filename.split("/")[-1]
                     logger.info(
                         f"{magic_string} found on line {i+1} of {text_file}")
-                    store[text_file] = i
+                    store[text_file] = i+1
     return
 
 
